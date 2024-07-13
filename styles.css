@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+}
+ul,
+li {
+  padding: 0;
+  list-style-type: none;
+}
+.grid-container {
+  max-width: 1920px;
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  column-gap: 30px;
+}
+header,
+footer {
+  grid-column: span 3;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+nav {
+  border-right: 1px solid #dddddd;
+  padding: 30px;
+}
+article {
+  padding: 30px;
+}
+aside {
+  border-left: 1px solid #dddddd;
+  padding: 30px;
+}
+footer {
+  border-top: 1px solid #ddd;
+  padding: 30px;
+}
+nav h3,
+aside p > strong {
+  font-size: 24px;
+}
+
+article p {
+  margin-top: 30px;
+  line-height: 2em;
+  color: #777;
+}
+
+article img {
+  width: 100%;
+}
+
+article h2 {
+  font-size: 3.5em;
+  max-width: 800px;
+}
+
+nav ul li a,
+aside li p {
+  color: #333;
+  font-size: 1.2em;
+}
+@media screen and (max-width: 1140px) {
+  nav ul li a,
+  aside li p,
+  nav h3,
+  aside p > strong {
+    font-size: 16px;
+  }
+  article h2 {
+    font-size: 2.5em;
+  }
+  article,
+  nav,
+  aside {
+    padding: 10px;
+  }
+  footer {
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  nav {
+    grid-column: span 3;
+  }
+
+  article {
+    grid-column: span 2;
+    border-top: 1px solid #ddd;
+  }
+
+  .grid-container {
+    gap: 0;
+  }
+
+  aside {
+    border-top: 1px solid #ddd;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 760px) {
+  article,
+  aside {
+    grid-column: span 3;
+  }
+}
